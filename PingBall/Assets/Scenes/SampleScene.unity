@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 355739446}
   - component: {fileID: 355739445}
   m_Layer: 0
-  m_Name: RightFlipper
+  m_Name: LeftFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355739439}
   m_LocalRotation: {x: 0.058968365, y: -0.01580052, z: 0.25833637, w: 0.9641242}
-  m_LocalPosition: {x: -1.7994198, y: -1.4054706, z: 0.37535214}
+  m_LocalPosition: {x: -2, y: -1.4054706, z: 0.37535214}
   m_LocalScale: {x: 0.30000004, y: 1.6000001, z: 0.2999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621aa91fdd1c0e747bd73c4c312458d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reatPosition: 0
-  pressedPosition: -45
+  restPosition: 0
+  pressedPosition: 45
   hitStrenght: 10000
   flipperDamper: 150
   inputName: LFlipper
@@ -263,10 +263,10 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
     min: 0
-    max: 0
+    max: 66.91233
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 1337749101}
   - component: {fileID: 1337749100}
   - component: {fileID: 1337749104}
+  - component: {fileID: 1337749105}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -959,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337749099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.898, y: 0.6, z: -0.43}
+  m_LocalPosition: {x: 2.72, y: 0.6, z: -0.43}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -974,14 +975,28 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337749099}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1337749105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337749099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b8686d3bb15714ab7d009db8a8d273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  gravity: {x: 0, y: -100, z: 0}
 --- !u!1 &1454909194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1241,7 @@ GameObject:
   - component: {fileID: 1865564651}
   - component: {fileID: 1865564650}
   m_Layer: 0
-  m_Name: LeftFlipper
+  m_Name: RightFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865564648}
   m_LocalRotation: {x: 0.05896833, y: 0.015800515, z: -0.25833628, w: 0.9641242}
-  m_LocalPosition: {x: 0.3895802, y: -1.4054706, z: 0.37535214}
+  m_LocalPosition: {x: 0.6, y: -1.4054706, z: 0.37535214}
   m_LocalScale: {x: 0.30000004, y: 1.6000001, z: 0.2999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1270,9 +1285,9 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
+    min: -45
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -1311,11 +1326,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621aa91fdd1c0e747bd73c4c312458d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reatPosition: 0
+  restPosition: 0
   pressedPosition: -45
   hitStrenght: 10000
   flipperDamper: 150
-  inputName: LFlipper
+  inputName: RFlipper
 --- !u!65 &1865564653
 BoxCollider:
   m_ObjectHideFlags: 0
