@@ -12,7 +12,7 @@ public class Plunger_Script : MonoBehaviour
     List<Rigidbody> ballList;
     bool ballReady; 
     public bool isTriggered = false;  // 是否有物體觸發
-    private float timer = 0.0f;        // 計時器
+    //private float timer = 0.0f;        // 計時器
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,6 @@ public class Plunger_Script : MonoBehaviour
         ballList = new List<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         powerSlider.value = power;
@@ -46,16 +45,22 @@ public class Plunger_Script : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                foreach(Rigidbody r in ballList)
+                power -= 10 * Time.deltaTime;
+                foreach (Rigidbody r in ballList)
                 {
-                    r.AddForce(Vector3.up * power * 5);
+                    r.AddForce(Vector3.up * power * 0.1f);
                     print(power);
                 }
+
+                if(isTriggered == false)
+                {
+                    power -= 50 * Time.deltaTime;
+                }
             }
-            if(isTriggered)
-            {
-                power -= 200 * Time.deltaTime;
-            }
+            //if(isTriggered)
+            //{
+            //    power -= 200 * Time.deltaTime;
+            //}
         }
         else
         {
@@ -64,47 +69,19 @@ public class Plunger_Script : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             ballList.Add(other.gameObject.GetComponent<Rigidbody>());
             ballReady = true;
-            isTriggered = false;
-            //print(ballList.Count);
-            //print(ballReady);
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // ballList.Remove(other.gameObject.GetComponent<Rigidbody>());
-            //print(ballReady);
-            StartCoroutine(WaitForPrint());
-            isTriggered = true;
-            timer = 0.0f;
+            isTriggered = false;
         }
-    }
-
-    private IEnumerator WaitForPrint()
-    {
-        while (timer < 2.0f)
-        {
-            yield return null;
-
-            if (isTriggered)  // 如果再度碰到
-            {
-                timer = 0.0f;
-                isTriggered = false;
-            }
-            else
-            {
-                timer += Time.deltaTime;
-            }
-        }       
-        power = 0f;
-        ballReady = false;
     }
 }

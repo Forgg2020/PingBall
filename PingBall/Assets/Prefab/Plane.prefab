@@ -525,6 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPower: 100
   powerSlider: {fileID: 0}
+  isTriggered: 0
 --- !u!1 &1059020304845420765
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +538,7 @@ GameObject:
   - component: {fileID: 1059020304845420762}
   - component: {fileID: 1059020304845420763}
   - component: {fileID: 1059020304845420764}
+  - component: {fileID: 1832979406311752519}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -622,6 +624,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1832979406311752519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059020304845420765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f872c4738b40478328d35efc78fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 10
+  Ball: {fileID: 0}
 --- !u!1 &1059020304933269672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75bdc8011bc572489b90a9366443690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ball: {fileID: 0}
+  speed: 10
 --- !u!82 &1059020305783028691
 AudioSource:
   m_ObjectHideFlags: 0

@@ -6,23 +6,26 @@ using UnityEngine.UI;
 public class AddSpeed : MonoBehaviour
 {
     AudioSource AS;
-    DetectDirection DD;
-    GameObject player;
+    public Transform Ball;
     // Start is called before the first frame update
-    void Start()
+    public float speed = 10f; // 物體的速度
+    Vector3 direction;
+    private void Update()
     {
-        AS = GetComponent<AudioSource>();
-    }
+        // 計算目標方向向量
+        direction = Ball.position - transform.position;
 
-    // Update is called once per frame
-    
+        // 將方向向量歸一化，使其成為單位向量
+        direction.Normalize();
+
+        // 將加速度應用於物體上，使其沿著目標方向移動
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            AS.Play();
-            //DD
-        }
+        if (other.gameObject.CompareTag("Player"))
+            print(direction);
+            print("FK");
+            Ball.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Acceleration);
     }
 }
