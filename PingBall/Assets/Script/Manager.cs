@@ -6,28 +6,37 @@ public class Manager : MonoBehaviour
 {
     [Header("碰撞")]
     public GameObject[] Plus_GameObject;
+    public Collider[] col;
     public GameObject Ball;
-    Collider[] col;
+    public Collider Ballcol;
 
-    private void Start()
+
+    public void Start()
     {
         Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
 
-        for (int i = 0; i >= 20; i++)
+        col = new Collider[5]; // 初始化 Collider 陣列
+
+        for (int i = 0; i < 5; i++)
         {
-            col[i] = Plus_GameObject[i].GetComponent<Collider>();
+            col[i] = Plus_GameObject[i].GetComponent<BoxCollider>();
         }
+
+        Ballcol = Ball.GetComponent<SphereCollider>();
     }
 
-
-    private void OncOnCollisionEnter(Collider other)
+    private void Update()
     {
-        for(int i = 0; i  >=20; i++)
+        for (int i = 0; i < 5; i++)
         {
-            //if (Plus_GameObject[i].tag == "Bouncy" && objB.tag == "Bouncy") // 如果 A 是標籤為 "A" 的物體，B 是標籤為 "B" 的物體
-            //{
-            //    print("Bom");
-            //}
+            if (col[i].bounds.Intersects(Ballcol.bounds))
+            {
+                print("end");
+            }
         }
+    }
+    public void OncOnCollisionEnter(Collider other)
+    {
+        
     }
 }
