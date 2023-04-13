@@ -12,10 +12,15 @@ public class Manager : MonoBehaviour
 
     [Header("分數")]
     public int Score;
+
+    [Header("關卡")]
+    public GameObject PlayerBall;
     public void Start()
     {
-        Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
 
+        Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
+        Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
+        Ball = GameObject.FindGameObjectWithTag("Player");
         col = new Collider[5]; // 初始化 Collider 陣列
 
         for (int i = 0; i < 5; i++)
@@ -32,14 +37,16 @@ public class Manager : MonoBehaviour
         {
             if (col[i].bounds.Intersects(Ballcol.bounds))
             {
-                print("end");
-
-                Score = Score + 10;
+                Invoke("ResetLevel", 2f);
             }
         }
     }
-    public void OncOnCollisionEnter(Collider other)
+
+    public void ResetLevel()
     {
-        
+        //SceneManager.LoadScene(0);
+        Destroy(Ball);
+        //Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
+        Score = Score + 10;
     }
 }

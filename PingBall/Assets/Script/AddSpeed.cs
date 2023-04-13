@@ -25,7 +25,6 @@ public class AddSpeed : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             print(direction);
-            print("FK");
             Ball.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Acceleration);
     }
 }

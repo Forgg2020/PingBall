@@ -61,6 +61,7 @@
     <Compile Include="Assets\Script\SwtGravity.cs" />
     <Compile Include="Assets\Script\DetectDirection.cs" />
     <Compile Include="Assets\Script\Plunger_Script.cs" />
+    <Compile Include="Assets\PlayerScript.cs" />
     <Compile Include="Assets\Script\Flipper.cs" />
     <Compile Include="Assets\Script\AddSpeed.cs" />
   </ItemGroup>
