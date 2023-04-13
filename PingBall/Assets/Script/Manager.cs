@@ -10,7 +10,8 @@ public class Manager : MonoBehaviour
     public GameObject Ball;
     public Collider Ballcol;
 
-
+    [Header("¤À¼Æ")]
+    public int Score;
     public void Start()
     {
         Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
@@ -32,6 +33,8 @@ public class Manager : MonoBehaviour
             if (col[i].bounds.Intersects(Ballcol.bounds))
             {
                 print("end");
+
+                Score = Score + 10;
             }
         }
     }
