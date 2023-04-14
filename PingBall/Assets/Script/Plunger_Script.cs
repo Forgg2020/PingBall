@@ -48,14 +48,9 @@ public class Plunger_Script : MonoBehaviour
                 power -= 10 * Time.deltaTime;
                 foreach (Rigidbody r in ballList)
                 {
-                    r.AddForce(Vector3.up * power * 0.1f);
-                    print("Power:"+power);
+                    r.AddForce(Vector3.up * power * 0.3f);
+                    //print("Power:"+power);
                 }
-
-                //if(isTriggered == false)
-                //{
-                //    power -= 50 * Time.deltaTime;
-                //}
             }
             if (isTriggered == false)
             {

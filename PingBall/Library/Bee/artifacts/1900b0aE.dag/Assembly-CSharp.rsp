@@ -349,13 +349,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Script/AddSpeed.cs"
 "Assets/Script/Bouncy.cs"
+"Assets/Script/ChangeTrigger.cs"
 "Assets/Script/Flipper.cs"
 "Assets/Script/Manager.cs"
 "Assets/Script/PlayerScript.cs"
 "Assets/Script/Plunger_Script.cs"
 "Assets/Script/SetGravity.cs"
+"Assets/Script/SpeedBoard.cs"
 "Assets/Script/Test.cs"
 -langversion:9.0
 
