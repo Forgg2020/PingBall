@@ -7,12 +7,12 @@ public class Plunger_Script : MonoBehaviour
 {
     float power;
     float minPower;
-    public float maxPower = 100;
+    public float maxPower = 20;
     public Slider powerSlider;
     List<Rigidbody> ballList;
     bool ballReady; 
     public bool isTriggered = false;  // 是否有物體觸發
-    //private float timer = 0.0f;        // 計時器
+    public bool ballCanMove;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class Plunger_Script : MonoBehaviour
             {
                 if(power <= maxPower)
                 {
-                    power += 50 * Time.deltaTime;
+                    power += 20 * Time.deltaTime;
                 }
             }
             if (Input.GetKeyUp(KeyCode.Space))
@@ -49,18 +49,18 @@ public class Plunger_Script : MonoBehaviour
                 foreach (Rigidbody r in ballList)
                 {
                     r.AddForce(Vector3.up * power * 0.1f);
-                    print(power);
+                    print("Power:"+power);
                 }
 
-                if(isTriggered == false)
-                {
-                    power -= 50 * Time.deltaTime;
-                }
+                //if(isTriggered == false)
+                //{
+                //    power -= 50 * Time.deltaTime;
+                //}
             }
-            //if(isTriggered)
-            //{
-            //    power -= 200 * Time.deltaTime;
-            //}
+            if (isTriggered == false)
+            {
+                power -= 40 * Time.deltaTime;
+            }
         }
         else
         {
@@ -75,6 +75,7 @@ public class Plunger_Script : MonoBehaviour
         {
             ballList.Add(other.gameObject.GetComponent<Rigidbody>());
             ballReady = true;
+            isTriggered = true;
         }
     }
     private void OnTriggerExit(Collider other)

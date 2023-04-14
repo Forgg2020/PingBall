@@ -4,50 +4,36 @@ using UnityEngine;
 
 public class Bouncy : MonoBehaviour
 {
-    public float bounceForce = 10f; // 反彈力大小
-    public GameObject Ball;
-
-    private void Start()
+    Rigidbody rb;
+    bool canRebound;
+    // Start is called before the first frame update
+    void Start()
     {
-        Ball = GameObject.FindGameObjectWithTag("Player");
+        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void FixedUpdate()
     {
-        // 計算反彈方向
-       Vector3 bounceDirection = Vector3.Reflect(transform.position, collision.contacts[0].normal);
+        // 取得當前速度向量
 
-        // 將反彈力應用於物體上
-       Ball.GetComponent<Rigidbody>().AddForce(bounceDirection * bounceForce, ForceMode.Impulse);
+        Vector3 currentVelocity = rb.velocity;
+        float ballSpeed = currentVelocity.magnitude;
 
-        if (collision.gameObject.CompareTag("Player"))
+        print(ballSpeed);
+
+        if(canRebound)
         {
-            
-            StartCoroutine(StopBallForSeconds());
-            
+            ballSpeed = Mathf.Clamp(ballSpeed, 0, 15);
+            Vector3 limitedVelocity = currentVelocity.normalized * ballSpeed;
+            rb.velocity = limitedVelocity;
+        }        
+    }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            canRebound = true;
         }
     }
-
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Invoke("Shooting", 2f);
-        }
-    }
-    public void Shooting()
-    {
-        Ball.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);
-        print("back");
-    }
-
-    private IEnumerator StopBallForSeconds()
-    {
-        Ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        yield return new WaitForSeconds(0.5f);
-        Ball.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 0); // 恢復速度
-    }
-
 }

@@ -58,12 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Manager.cs" />
     <Compile Include="Assets\Script\Bouncy.cs" />
-    <Compile Include="Assets\Script\SwtGravity.cs" />
-    <Compile Include="Assets\Script\DetectDirection.cs" />
+    <Compile Include="Assets\Script\SetGravity.cs" />
     <Compile Include="Assets\Script\Plunger_Script.cs" />
-    <Compile Include="Assets\PlayerScript.cs" />
+    <Compile Include="Assets\Script\PlayerScript.cs" />
     <Compile Include="Assets\Script\Flipper.cs" />
     <Compile Include="Assets\Script\AddSpeed.cs" />
+    <Compile Include="Assets\Script\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 9044842691015232038}
   - component: {fileID: 9044842691015232039}
   - component: {fileID: 9044842691015232036}
+  - component: {fileID: 4779066989865405658}
   - component: {fileID: 9044842691015232037}
-  - component: {fileID: 9044842691015232056}
+  - component: {fileID: 2573769469364355790}
   - component: {fileID: 9044842691015232059}
-  - component: {fileID: 9044842691015232058}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -87,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4779066989865405658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044842691015232034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b8686d3bb15714ab7d009db8a8d273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: {x: 0, y: -9.8, z: 0}
 --- !u!135 &9044842691015232037
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -100,20 +113,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9044842691015232056
+--- !u!114 &2573769469364355790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9044842691015232034}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b8686d3bb15714ab7d009db8a8d273, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fab0b901f516df4eb9cc392d58b223f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 9044842691015232034}
-  gravity: {x: 0, y: -9.8, z: 9.8}
+  score: 0
+  maxSpeed: 10
+  minSpeed: 0
+  canMove: 0
 --- !u!54 &9044842691015232059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,16 +144,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &9044842691015232058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044842691015232034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3107d24c900443749b7c8b6ea8672070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_CollisionDetection: 2

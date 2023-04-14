@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Space
   - Bouncy
+  - StartBoard
   layers:
   - Default
   - TransparentFX

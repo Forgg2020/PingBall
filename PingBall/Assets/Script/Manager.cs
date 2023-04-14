@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class Manager : MonoBehaviour
     public GameObject PlayerBall;
     public void Start()
     {
+        //Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
 
-        Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
         Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
         Ball = GameObject.FindGameObjectWithTag("Player");
         col = new Collider[5]; // ªì©l¤Æ Collider °}¦C
@@ -44,9 +45,8 @@ public class Manager : MonoBehaviour
 
     public void ResetLevel()
     {
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
         Destroy(Ball);
-        //Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
         Score = Score + 10;
     }
 }
