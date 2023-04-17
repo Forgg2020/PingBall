@@ -18,11 +18,9 @@ public class Manager : TagCollisionTriiger
     public GameObject PlayerBall;
     public void Start()
     {
-        //Instantiate(PlayerBall, new Vector3(4.2f, -2.4f, 0), Quaternion.identity);
-
         Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
         Ball = GameObject.FindGameObjectWithTag("Player");
-        col = new Collider[5]; // ªì©l¤Æ Collider °}¦C
+        col = new Collider[5]; 
 
         for (int i = 0; i < 5; i++)
         {

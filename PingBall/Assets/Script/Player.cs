@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : PlayerCollision
+public class Player : MonoBehaviour
 {
     [Header("關卡")]
     //public GameObject PlayerBall;
@@ -15,19 +15,12 @@ public class Player : PlayerCollision
     public float minSpeed = 0f;
 
 
-    private void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    protected virtual void onPlayerCollision(Collision other)
-    {
-        if (other.gameObject.CompareTag("Space"))
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         // 取得當前速度向量
 
@@ -37,25 +30,6 @@ public class Player : PlayerCollision
         ballSpeed = Mathf.Clamp(ballSpeed, 10, 25);
 
         rb.velocity = currentVelocity;
-
-    }
-}
-
-
-public class PlayerCollision : MonoBehaviour
-{
-    protected virtual string CollisionTag { get; } = "Space";
-
-    public void OncOnCollisionEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag(CollisionTag))
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
-
-    protected virtual void onPlayerCollision()
-    {
 
     }
 }

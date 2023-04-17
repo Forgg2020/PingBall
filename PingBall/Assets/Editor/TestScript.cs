@@ -12,7 +12,7 @@ public class TestScript
     [TestCase(10, '-', 2, 8)]
     [TestCase(10, '*', 2, 20)]
     [TestCase(500, '/', 10, 50)]
-    [TestCase(20,'+',10,10)]
+    [TestCase(20,'+',10,30)]
     public void Calculate_Test(float x, char pointer, float y, float result)
     {
         var Calculator = new Calculator(x, y, pointer);

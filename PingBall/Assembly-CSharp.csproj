@@ -757,13 +757,13 @@
       <Project>{F0251CA9-199F-2866-9D78-BD0A05EE4ABA}</Project>
       <Name>Unity.Services.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{9AB4121F-7205-EE14-D56F-CEEC54E141B6}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
       <Project>{958450FB-97AF-79FC-C4E3-6F01832C780A}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
+      <Project>{9AB4121F-7205-EE14-D56F-CEEC54E141B6}</Project>
+      <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{F626DACA-092B-6018-D1DF-DE1599F67130}</Project>
