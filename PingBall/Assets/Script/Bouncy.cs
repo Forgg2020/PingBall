@@ -40,8 +40,13 @@ public class TagCollisionTriiger : MonoBehaviour
             onCollisionPlayer(other);
         }
     }
-
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag(CollisionTag))
+        {
+            onTriggerPlayerOut(other);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(CollisionTag))
@@ -54,6 +59,11 @@ public class TagCollisionTriiger : MonoBehaviour
 
     }
     protected virtual void onTriggerPlayer(Collider other)
+    {
+
+    }
+
+    protected virtual void onTriggerPlayerOut(Collider other)
     {
 
     }

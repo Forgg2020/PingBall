@@ -71,17 +71,13 @@ public class Plunger : TagCollisionTriiger
 
     protected override void onTriggerPlayer(Collider other)
     {
-        if (other.gameObject.CompareTag(CollisionTag))
-        {
             ballReady = true;
-            isTriggered = true;
-        }
+            isTriggered = true;        
     }
-    private void OnTriggerExit(Collider other)
+
+    protected override void onTriggerPlayerOut(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
+        
             isTriggered = false;
-        }
     }
 }

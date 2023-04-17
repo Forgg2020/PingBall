@@ -9,12 +9,6 @@ public class SpeedBoard : TagCollisionTriiger
     Transform accelerationPoint;
     private Rigidbody rb;
 
-    private void Start()
-    {
-        //Player = GameObject.FindGameObjectWithTag("Player");
-        //accelerationPoint = Player.transform;
-        //rb = Player.GetComponent<Rigidbody>();
-    }
     protected override void onCollisionPlayer(Collision other)
     {
         if (other.gameObject.CompareTag(CollisionTag))

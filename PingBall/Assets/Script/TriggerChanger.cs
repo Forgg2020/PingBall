@@ -16,7 +16,6 @@ public class TriggerChanger : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        print("out");
         myTrigger.GetComponent<MeshCollider>().isTrigger = false;
         Invoke("TriggerBack", 1.5f);
     }
