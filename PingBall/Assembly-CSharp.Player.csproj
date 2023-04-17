@@ -57,14 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Manager.cs" />
+    <Compile Include="Assets\Script\TriggerChanger.cs" />
     <Compile Include="Assets\Script\Bouncy.cs" />
-    <Compile Include="Assets\Script\SetGravity.cs" />
+    <Compile Include="Assets\Script\GravityGenerater.cs" />
     <Compile Include="Assets\Script\Test.cs" />
-    <Compile Include="Assets\Script\Plunger_Script.cs" />
-    <Compile Include="Assets\Script\PlayerScript.cs" />
+    <Compile Include="Assets\Script\Plunger.cs" />
+    <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Flipper.cs" />
     <Compile Include="Assets\Script\SpeedBoard.cs" />
-    <Compile Include="Assets\Script\ChangeTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

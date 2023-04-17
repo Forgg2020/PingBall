@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Manager : MonoBehaviour
+public class Manager : TagCollisionTriiger
 {
     [Header("¸I¼²")]
     public GameObject[] Plus_GameObject;

@@ -7,6 +7,7 @@ TagManager:
   - Space
   - Bouncy
   - StartBoard
+  - Enemy
   layers:
   - Default
   - TransparentFX
