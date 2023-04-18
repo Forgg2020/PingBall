@@ -5,7 +5,6 @@ using UnityEngine;
 public class TriggerChanger : MonoBehaviour
 {
     public GameObject myTrigger;
-    bool[] TriggerOrNot;
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))

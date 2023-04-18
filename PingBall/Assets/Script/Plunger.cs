@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using BouncyNameSpace;
 public class Plunger : TagCollisionTriiger
 {
-    float power;
+    public float power;
     float minPower;
     public float maxPower = 2000;
     public Slider powerSlider;
@@ -22,9 +22,8 @@ public class Plunger : TagCollisionTriiger
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void Update()
     {
-
         print(power);
         powerSlider.value = power;
         if (ballReady)
@@ -34,14 +33,14 @@ public class Plunger : TagCollisionTriiger
             {
                 if (power <= maxPower)
                 {
-                    power += 500 * Time.deltaTime;
+                    power += 1000 * Time.deltaTime;
                 }
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 if (power > 0)
                 {
-                    power -= 200 * Time.deltaTime;
+                    power -= 1500 * Time.deltaTime;
                 }
                 rb.AddForce(Vector3.up * power);
                 StartCoroutine(DecreasePower());
@@ -56,7 +55,7 @@ public class Plunger : TagCollisionTriiger
             powerSlider.gameObject.SetActive(false);
         }
     }
-    private IEnumerator DecreasePower()
+    public IEnumerator DecreasePower()
     {
         float startTime = Time.time;
         float endTime = startTime + 2f;
@@ -71,13 +70,12 @@ public class Plunger : TagCollisionTriiger
 
     protected override void onTriggerPlayer(Collider other)
     {
-            ballReady = true;
-            isTriggered = true;        
+        ballReady = true;
+        isTriggered = true;
     }
 
     protected override void onTriggerPlayerOut(Collider other)
-    {
-        
-            isTriggered = false;
+    {        
+        isTriggered = false;
     }
 }

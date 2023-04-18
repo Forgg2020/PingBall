@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using BouncyNameSpace;
 public class SpeedBoard : TagCollisionTriiger
 {
     public float acceleration = 1.0f;

@@ -6,7 +6,7 @@ public class GravityGenerater : MonoBehaviour
 {
     public Vector3 gravity = Vector3.down * 9.8f;
     Rigidbody rb;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
