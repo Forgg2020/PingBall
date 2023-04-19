@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class TriggerChanger : MonoBehaviour
 {
-    public GameObject myTrigger;
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            print("yes");
-        }
-    }
+    public Collider myTrigger;
+    public Collider[] ColliderEorD;    
 
-    public void OnTriggerExit(Collider other)
+    private void Update()
     {
-        myTrigger.GetComponent<MeshCollider>().isTrigger = false;
-        Invoke("TriggerBack", 1.5f);
-    }
-    private void TriggerBack()
-    {
-        myTrigger.GetComponent<MeshCollider>().isTrigger = true;
+        if (Manager.Ball.GetComponent<SphereCollider>().bounds.Intersects(ColliderEorD[0].bounds)) //Disable
+        {
+            myTrigger.isTrigger = true;
+        }
+        if (Manager.Ball.GetComponent<SphereCollider>().bounds.Intersects(ColliderEorD[1].bounds)) //Enable
+        { 
+            myTrigger.isTrigger = false;
+        }
     }
 }

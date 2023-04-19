@@ -6,17 +6,19 @@ using BouncyNameSpace;
 
 public class Manager : TagCollisionTriiger
 {
-    [Header("¸I¼²")]
+    [Header("ï¿½Iï¿½ï¿½")]
     public GameObject[] Plus_GameObject;
     public Collider[] col;
-    public GameObject Ball;
     public Collider Ballcol;
+    public static GameObject Ball;
 
-    [Header("¤À¼Æ")]
+    [Header("ï¿½ï¿½ï¿½ï¿½")]
     public int Score;
 
-    [Header("Ãö¥d")]
+    [Header("ï¿½ï¿½ï¿½d")]
     public GameObject PlayerBall;
+
+
     public void Start()
     {
         Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
@@ -27,7 +29,6 @@ public class Manager : TagCollisionTriiger
         {
             col[i] = Plus_GameObject[i].GetComponent<BoxCollider>();
         }
-
         Ballcol = Ball.GetComponent<SphereCollider>();
     }
 
@@ -37,7 +38,7 @@ public class Manager : TagCollisionTriiger
         {
             if (col[i].bounds.Intersects(Ballcol.bounds))
             {
-                Invoke("ResetLevel", 2f);
+                ResetLevel();
             }
         }
     }

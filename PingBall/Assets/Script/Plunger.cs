@@ -24,7 +24,7 @@ public class Plunger : TagCollisionTriiger
 
     public void Update()
     {
-        print(power);
+        
         powerSlider.value = power;
         if (ballReady)
         {
