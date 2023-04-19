@@ -12,7 +12,7 @@ public class Manager : TagCollisionTriiger
     public GameObject[] SpaceGameObject;
     public GameObject[] ScoreGameObject;
     public Collider[] SpaceCol = new Collider[5];
-    public Collider[] ScoreCol = new Collider[5];
+    public Collider[] ScoreCol = new Collider[3];
     public Collider Ballcol;
 
     [Header("����")]
@@ -31,11 +31,10 @@ public class Manager : TagCollisionTriiger
         {
             SpaceCol[i] = SpaceGameObject[i].GetComponent<BoxCollider>();
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             ScoreCol[i] = ScoreGameObject[i].GetComponent<SphereCollider>();
         }
-
     }
 
     private void Update()
@@ -47,11 +46,13 @@ public class Manager : TagCollisionTriiger
                 SceneManager.LoadScene(0);
                 Destroy(Ball);
             }
-
+        }
+        for (int i = 0; i < 4; i++)
+        {
             if (ScoreCol[i].bounds.Intersects(Ballcol.bounds))
             {
                 Score = Score + 10;
             }
-        }
+        }        
     }
 }
