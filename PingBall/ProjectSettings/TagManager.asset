@@ -8,6 +8,7 @@ TagManager:
   - Bouncy
   - StartBoard
   - Enemy
+  - Score
   layers:
   - Default
   - TransparentFX

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 8
-    y: 51
-    width: 1904
-    height: 981
+    x: 0
+    y: 43.2
+    width: 1536
+    height: 772.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
-    height: 981
+    width: 1536
+    height: 772.8
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1904
+    width: 1536
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 961
-    width: 1904
+    y: 752.8
+    width: 1536
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1904
-    height: 931
+    width: 1536
+    height: 722.8
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 118
+  controlID: 16
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1453
-    height: 931
+    width: 1172
+    height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 119
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1453
-    height: 677
+    width: 1172
+    height: 496
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 120
+  controlID: 61
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 359
-    height: 677
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 289.6
+    height: 496
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 359
+    x: 289.6
     y: 0
-    width: 1094
-    height: 677
+    width: 882.4
+    height: 496
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
@@ -222,7 +222,6 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 15}
   - {fileID: 16}
-  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
@@ -241,15 +240,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 677
-    width: 1453
-    height: 254
+    y: 496
+    width: 1172
+    height: 226.79999
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
+  - {fileID: 17}
   - {fileID: 18}
-  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -262,23 +261,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1453
+    x: 1172
     y: 0
-    width: 451
-    height: 931
-  m_MinSize: {x: 100, y: 100}
+    width: 364
+    height: 722.8
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 19}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,21 +298,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1461
-    y: 81
-    width: 450
-    height: 910
+    x: 1168
+    y: 80.8
+    width: 359.79993
+    height: 687.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 132
+    ID: 179
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 630
-    - 210
+    - 462.4
+    - 154.4
     relativeSizes:
     - 0.75
     - 0.25
@@ -323,7 +322,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 840
+    lastTotalSize: 616.8
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -403,12 +402,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1004
-      uniqueId: '[Tests][D:/Unity Project/PingBall/PingBall/PingBall/Library/ScriptAssemblies/Tests.dll][suite]'
-      name: Tests.dll
-      fullName: D:/Unity Project/PingBall/PingBall/PingBall/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0414916
+    - id: 1008
+      uniqueId: "[EditorMOde][C:/Users/billl/OneDrive/\u684C\u9762/PingBall/PingBall/PingBall/Library/ScriptAssemblies/EditorMOde.dll][suite]"
+      name: EditorMOde.dll
+      fullName: "C:/Users/billl/OneDrive/\u684C\u9762/PingBall/PingBall/PingBall/Library/ScriptAssemblies/EditorMOde.dll"
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -420,11 +419,11 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[PingBall][suite]'
     - id: 1001
-      uniqueId: Tests.dll/[Tests][TestScript][suite]
-      name: TestScript
-      fullName: TestScript
-      resultStatus: 1
-      duration: 0.04029
+      uniqueId: EditorMOde.dll/[EditorMOde][DirectionTest][suite]
+      name: DirectionTest
+      fullName: DirectionTest
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -433,140 +432,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1004
-      parentUniqueId: '[Tests][D:/Unity Project/PingBall/PingBall/PingBall/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-      name: Calculate_Test
-      fullName: TestScript.Calculate_Test
-      resultStatus: 1
-      duration: 0.0212583
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][TestScript][suite]
+      parentId: 1008
+      parentUniqueId: "[EditorMOde][C:/Users/billl/OneDrive/\u684C\u9762/PingBall/PingBall/PingBall/Library/ScriptAssemblies/EditorMOde.dll][suite]"
     - id: 1002
-      uniqueId: Tests.dll/TestScript/Calculate_Test/[Tests][TestScript.Calculate_Test(10,'+',2,12)]
-      name: Calculate_Test(10,'+',2,12)
-      fullName: TestScript.Calculate_Test(10,'+',2,12)
-      resultStatus: 1
-      duration: 0.0136781
-      messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1006
-      parentUniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-    - id: 1003
-      uniqueId: Tests.dll/TestScript/Calculate_Test/[Tests][TestScript.Calculate_Test(10,'-',2,8)]
-      name: Calculate_Test(10,'-',2,8)
-      fullName: TestScript.Calculate_Test(10,'-',2,8)
-      resultStatus: 1
-      duration: 0.000644
-      messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-    - id: 1004
-      uniqueId: Tests.dll/TestScript/Calculate_Test/[Tests][TestScript.Calculate_Test(10,'*',2,20)]
-      name: Calculate_Test(10,'*',2,20)
-      fullName: TestScript.Calculate_Test(10,'*',2,20)
-      resultStatus: 1
-      duration: 0.0004176
-      messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1006
-      parentUniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-    - id: 1005
-      uniqueId: Tests.dll/TestScript/Calculate_Test/[Tests][TestScript.Calculate_Test(500,'/',10,50)]
-      name: Calculate_Test(500,'/',10,50)
-      fullName: TestScript.Calculate_Test(500,'/',10,50)
-      resultStatus: 1
-      duration: 0.0004123
-      messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1006
-      parentUniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-    - id: 1006
-      uniqueId: Tests.dll/TestScript/Calculate_Test/[Tests][TestScript.Calculate_Test(20,'+',10,30)]
-      name: Calculate_Test(20,'+',10,30)
-      fullName: TestScript.Calculate_Test(20,'+',10,30)
-      resultStatus: 1
-      duration: 0.000428
-      messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/TestScript/[Tests][TestScript.Calculate_Test][suite]
-    - id: 1003
-      uniqueId: Tests.dll/TestScript/[Tests][TestScript.NewTestScriptWithEnumeratorPasses]
-      name: NewTestScriptWithEnumeratorPasses
-      fullName: TestScript.NewTestScriptWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0098187
+      uniqueId: EditorMOde.dll/DirectionTest/[EditorMOde][DirectionTest.DirectionTestSimplePasses]
+      name: DirectionTestSimplePasses
+      fullName: DirectionTest.DirectionTestSimplePasses
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -577,7 +450,89 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][TestScript][suite]
+      parentUniqueId: EditorMOde.dll/[EditorMOde][DirectionTest][suite]
+    - id: 1003
+      uniqueId: EditorMOde.dll/[EditorMOde][GravityTest][suite]
+      name: GravityTest
+      fullName: GravityTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: "[EditorMOde][C:/Users/billl/OneDrive/\u684C\u9762/PingBall/PingBall/PingBall/Library/ScriptAssemblies/EditorMOde.dll][suite]"
+    - id: 1005
+      uniqueId: EditorMOde.dll/GravityTest/[EditorMOde][GravityTest.GravityT][suite]
+      name: GravityT
+      fullName: GravityTest.GravityT
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1003
+      parentUniqueId: EditorMOde.dll/[EditorMOde][GravityTest][suite]
+    - id: 1004
+      uniqueId: EditorMOde.dll/GravityTest/GravityT/[EditorMOde][GravityTest.GravityT()]
+      name: GravityT()
+      fullName: GravityTest.GravityT()
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: EditorMOde.dll/GravityTest/[EditorMOde][GravityTest.GravityT][suite]
+    - id: 1006
+      uniqueId: EditorMOde.dll/[EditorMOde][PlungerTest][suite]
+      name: PlungerTest
+      fullName: PlungerTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: "[EditorMOde][C:/Users/billl/OneDrive/\u684C\u9762/PingBall/PingBall/PingBall/Library/ScriptAssemblies/EditorMOde.dll][suite]"
+    - id: 1007
+      uniqueId: EditorMOde.dll/PlungerTest/[EditorMOde][PlungerTest.PowerInitialValueTest]
+      name: PowerInitialValueTest
+      fullName: PlungerTest.PowerInitialValueTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: EditorMOde.dll/[EditorMOde][PlungerTest][suite]
     m_ResultText: "Calculate_Test(20,'+',10,10) (0.001s)\n---\nExpected: 10.0f\r\n 
       But was:  30.0f\n---\nat TestScript.Calculate_Test (System.Single x, System.Char
       pointer, System.Single y, System.Single result) [0x0000d] in D:\\Unity Project\\PingBall\\PingBall\\PingBall\\Assets\\Editor\\TestScript.cs:22\n---\nYou
@@ -634,14 +589,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 367
-    y: 81
-    width: 1092
-    height: 656
+    x: 289.6
+    y: 73.6
+    width: 880.4
+    height: 475
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -652,7 +607,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -101, y: -26}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -662,9 +617,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 101, y: 0}
+      snapOffset: {x: -141, y: 149}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -843,9 +798,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.28136873, y: 0.82654095, z: 11.115467}
+    m_Target: {x: -0.47118312, y: -0.13656077, z: 8.095994}
     speed: 2
-    m_Value: {x: -0.28136873, y: 0.82654095, z: 11.115467}
+    m_Value: {x: -0.47118312, y: -0.13656077, z: 8.095994}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -892,9 +847,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.028190138, y: 0.017559262, z: -0.00014540314, w: -0.9996481}
+    m_Target: {x: -0.04767915, y: 0.010061377, z: -0.00012684637, w: -0.99901474}
     speed: 2
-    m_Value: {x: -0.02818451, y: 0.017555756, z: -0.00014537411, w: -0.99944854}
+    m_Value: {x: -0.0476695, y: 0.010059341, z: -0.0001268207, w: -0.99881256}
   m_Size:
     m_Target: 12.333506
     speed: 2
@@ -939,14 +894,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 81
-    width: 358
-    height: 656
+    x: 0
+    y: 73.6
+    width: 288.6
+    height: 475
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -954,9 +909,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c85e0000
-      m_LastClickedID: 24264
-      m_ExpandedIDs: d4f2ffff0af3ffffc8f5ffff38fbffff
+      m_SelectedIDs: a6130000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -996,14 +951,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 362
-    y: 81
-    width: 1101
-    height: 661
+    x: 289.6
+    y: 73.6
+    width: 880.4
+    height: 475
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1014,7 +969,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1101, y: 640}
+  m_TargetSize: {x: 880.4, y: 454}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1029,10 +984,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -550.5
-    m_HBaseRangeMax: 550.5
-    m_VBaseRangeMin: -320
-    m_VBaseRangeMax: 320
+    m_HBaseRangeMin: -352.16
+    m_HBaseRangeMax: 352.16
+    m_VBaseRangeMin: -181.6
+    m_VBaseRangeMax: 181.6
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1050,23 +1005,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1101
-      height: 640
+      width: 880.4
+      height: 454
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 550.5, y: 320}
+    m_Translation: {x: 440.2, y: 227}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -550.5
-      y: -320
-      width: 1101
-      height: 640
+      x: -440.2
+      y: -227
+      width: 880.4
+      height: 454
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1101, y: 661}
+  m_LastWindowPixelSize: {x: 1100.5, y: 593.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1088,7 +1043,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Asset Store
-    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1108,61 +1063,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 310, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Project Settings
-    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 363
-    y: 73
-    width: 1102
-    height: 598
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 0}
-  m_Scope: 1
-  m_SplitterFlex: 0.2
-  m_SearchText: 
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e594f01a
-    m_LastClickedID: 451974373
-    m_ExpandedIDs: a01a5fa600000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -1171,14 +1071,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 758
-    width: 1452
-    height: 233
+    x: 0
+    y: 569.60004
+    width: 1171
+    height: 205.79999
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1196,22 +1096,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Unity Project\PingBall\PingBall\PingBall
+  m_LastProjectPath: "C:\\Users\\billl\\OneDrive\\\u684C\u9762\\PingBall\\PingBall\\PingBall"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 9}
-    m_SelectedIDs: 445c0000
-    m_LastClickedID: 23620
-    m_ExpandedIDs: 00000000445c000000ca9a3b
+    scrollPos: {x: 0, y: 35.799988}
+    m_SelectedIDs: c65c0000
+    m_LastClickedID: 23750
+    m_ExpandedIDs: 00000000b65c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1239,7 +1139,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000445c0000
+    m_ExpandedIDs: 00000000b65c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1266,7 +1166,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1295,7 +1195,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 217
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1311,19 +1211,19 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 758
-    width: 1452
-    height: 233
+    x: 7.2000003
+    y: 567.2
+    width: 1159.8
+    height: 201.00003
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1339,14 +1239,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1465
-    y: 81
-    width: 454
-    height: 917
+    x: 1172
+    y: 73.6
+    width: 363
+    height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1357,7 +1257,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 2742
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

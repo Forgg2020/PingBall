@@ -1,52 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Collections;
 using BouncyNameSpace;
+
 
 public class Manager : TagCollisionTriiger
 {
     [Header("�I��")]
-    public GameObject[] Plus_GameObject;
-    public Collider[] col;
-    public Collider Ballcol;
     public static GameObject Ball;
+    public GameObject[] SpaceGameObject;
+    public GameObject[] ScoreGameObject;
+    public Collider[] SpaceCol = new Collider[5];
+    public Collider[] ScoreCol = new Collider[5];
+    public Collider Ballcol;
 
     [Header("����")]
     public int Score;
 
-    [Header("���d")]
-    public GameObject PlayerBall;
 
 
     public void Start()
     {
-        Plus_GameObject = GameObject.FindGameObjectsWithTag("Space");
         Ball = GameObject.FindGameObjectWithTag("Player");
-        col = new Collider[5]; 
+        SpaceGameObject = GameObject.FindGameObjectsWithTag("Space");
+        ScoreGameObject = GameObject.FindGameObjectsWithTag("Score");
+        Ballcol = Ball.GetComponent<SphereCollider>();
 
         for (int i = 0; i < 5; i++)
         {
-            col[i] = Plus_GameObject[i].GetComponent<BoxCollider>();
+            SpaceCol[i] = SpaceGameObject[i].GetComponent<BoxCollider>();
         }
-        Ballcol = Ball.GetComponent<SphereCollider>();
+        for (int i = 0; i < 3; i++)
+        {
+            ScoreCol[i] = ScoreGameObject[i].GetComponent<SphereCollider>();
+        }
+
     }
 
     private void Update()
     {
         for (int i = 0; i < 5; i++)
         {
-            if (col[i].bounds.Intersects(Ballcol.bounds))
+            if (SpaceCol[i].bounds.Intersects(Ballcol.bounds))
             {
-                ResetLevel();
+                SceneManager.LoadScene(0);
+                Destroy(Ball);
+            }
+
+            if (ScoreCol[i].bounds.Intersects(Ballcol.bounds))
+            {
+                Score = Score + 10;
             }
         }
-    }
-
-    public void ResetLevel()
-    {
-        SceneManager.LoadScene(0);
-        Destroy(Ball);
-        Score = Score + 10;
     }
 }
