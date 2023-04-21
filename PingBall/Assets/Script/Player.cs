@@ -16,7 +16,7 @@ public class Player : TagCollisionTriiger
     public float minSpeed = 0f;
 
     public static GameObject Manager;
-    private bool CanCreate;
+    public static bool CanCreate;
     public static SphereCollider PlayerCol;
 
     public SphereCollider Ballcol { get; private set; }
@@ -27,6 +27,7 @@ public class Player : TagCollisionTriiger
 
     private void Start()
     {
+        CanCreate = true;
         rb = GetComponent<Rigidbody>();
         PlayerCol = GetComponent<SphereCollider>();
         //Manager.GetComponent<Manager>().OnSouceEvent += OnScorePlus;
@@ -44,6 +45,7 @@ public class Player : TagCollisionTriiger
         if(other.gameObject.CompareTag("Space")) 
         {
             OnDeathEvent?.Invoke();
+            print("yes");
         }
     }
 
@@ -51,5 +53,4 @@ public class Player : TagCollisionTriiger
     {
 
     }
-
 }

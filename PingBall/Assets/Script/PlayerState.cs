@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    private bool CanCreate;
+    private bool CanCreate = true;
     public GameObject BallPrefab;
     public GameObject Player;
     private SphereCollider Ballcol;
@@ -12,12 +12,12 @@ public class PlayerState : MonoBehaviour
 
     private void Start()
     {
-        
+        Player.GetComponent<Player>().OnDeathEvent += OnPlyaerDeath;
     }
     public void Update()
     {
-        Player.GetComponent<Player>().OnDeathEvent += OnPlyaerDeath;
     }
+    
 
     public void OnPlyaerDeath()
     {
@@ -25,6 +25,7 @@ public class PlayerState : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(BallPrefab, new Vector3(4.2f, -2.5f, -0.1f), new Quaternion(0, 0, 0, 0));
+            Debug.Log("death");
             //Ballcol = Player.GetComponent<SphereCollider>();
             Debug.Log("death");
             rb = Player.GetComponent<Rigidbody>();
