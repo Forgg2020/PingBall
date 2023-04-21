@@ -34,9 +34,14 @@ namespace BouncyNameSpace
     {
         protected virtual string CollisionTag { get; } = "Player";
 
+
         private void OnCollisionEnter(Collision other)
-        {   
+        {
             if (other.gameObject.CompareTag(CollisionTag))
+            {
+                onCollisionPlayer(other);
+            }
+            else if(other.gameObject.CompareTag("Space"))
             {
                 onCollisionPlayer(other);
             }

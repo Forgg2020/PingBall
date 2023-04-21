@@ -5,51 +5,29 @@ using System.Collections;
 using BouncyNameSpace;
 using UnityEngine.Events;
 
-public class Manager : TagCollisionTriiger//, IEndObserver
+public class Manager : TagCollisionTriiger
 {
     [Header("�I��")]
-    public GameObject BallPrefab;
-    public GameObject[] SpaceGameObject;
-    public GameObject[] ScoreGameObject;
-    public Collider[] SpaceCol = new Collider[5];
-    public Collider[] ScoreCol = new Collider[2];
-    public Collider Ballcol;
+    public Collider SpaceCol;
+    public Collider[] ScoreCol;
 
     [Header("分數")]
     public int Score;
 
  
-    public delegate void OnDeath();
-    public event OnDeath OnDeathEvent;
-    
-    private void Start()
-    {
-        SpaceGameObject = GameObject.FindGameObjectsWithTag("Space");
-        ScoreGameObject = GameObject.FindGameObjectsWithTag("Score");
 
-        for (int i = 0; i < 5; i++)
-        {
-            SpaceCol[i] = SpaceGameObject[i].GetComponent<BoxCollider>();
-        }
-        for (int i = 0; i < 2; i++)
-        {
-            ScoreCol[i] = ScoreGameObject[i].GetComponent<SphereCollider>();
-        }
-    }
+    public delegate void OnLevelEvent();
+    public event OnLevelEvent OnSouceEvent;
     private void Update()
     {
-        for (int i = 0; i < 5; i++)
+        if (SpaceCol.bounds.Intersects(Player.PlayerCol.bounds))
         {
-            if (SpaceCol[i].bounds.Intersects(Player.PlayerCol.bounds))
-            {
-                OnDeathEvent?.Invoke();
-            }
         }
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < ScoreCol.Length; i++)
         {
             if (ScoreCol[i].bounds.Intersects(Player.PlayerCol.bounds))
             {
-                Score = Score + 10;
+                OnSouceEvent?.Invoke();
             }
         }
     }

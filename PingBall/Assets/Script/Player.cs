@@ -7,10 +7,7 @@ using BouncyNameSpace;
 
 public class Player : TagCollisionTriiger
 {
-    
-
     [Header("分數")]
-    //public GameObject PlayerBall;
     public int score;
 
     [Header("速度")]
@@ -18,22 +15,21 @@ public class Player : TagCollisionTriiger
     public float maxSpeed = 5f;
     public float minSpeed = 0f;
 
-
-
-    GameObject Manager;
-    public GameObject BallPrefab;
+    public static GameObject Manager;
     private bool CanCreate;
     public static SphereCollider PlayerCol;
 
     public SphereCollider Ballcol { get; private set; }
 
+    public delegate void OnPlayerEvent();
+    public event OnPlayerEvent OnDeathEvent;
+    public event OnPlayerEvent OnSpawnEvent;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         PlayerCol = GetComponent<SphereCollider>();
-        Manager = GameObject.Find("Manager");
-        Manager.GetComponent<Manager>().OnDeathEvent += OnPlyaerDeath;
-        print("yes");
+        //Manager.GetComponent<Manager>().OnSouceEvent += OnScorePlus;
     }
 
     public void FixedUpdate()
@@ -43,22 +39,17 @@ public class Player : TagCollisionTriiger
         ballSpeed = Mathf.Clamp(ballSpeed, 10, 25);
         rb.velocity = currentVelocity;
     }
-    IEnumerator DelayedAction()
+    public void OnTriggerEnter(Collider other)
     {
-        yield return new WaitForSeconds(1f); // 等待1秒
-         // 要執行的程式碼
-    }
-    public void OnPlyaerDeath()
-    {        
-        if(!CanCreate)
+        if(other.gameObject.CompareTag("Space")) 
         {
-            Destroy(gameObject);
-            Instantiate(BallPrefab, new Vector3(4.2f, -2.5f, -0.1f), new Quaternion(0, 0, 0, 0));
-            Ballcol = gameObject.GetComponent<SphereCollider>();
-            Debug.Log("death");
-            CanCreate = true;
-            rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
-            //SceneManager.LoadScene(0);
+            OnDeathEvent?.Invoke();
         }
     }
+
+    public void OnScorePlus()
+    {
+
+    }
+
 }

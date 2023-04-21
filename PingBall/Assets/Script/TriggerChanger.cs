@@ -6,10 +6,6 @@ public class TriggerChanger : MonoBehaviour
 {
     public Collider myTrigger;
     public Collider[] ColliderEorD;
-    public bool TopandDown;
-    public Collider[] ColliderTopandDown;
-
-    
 
     private void Update()
     {

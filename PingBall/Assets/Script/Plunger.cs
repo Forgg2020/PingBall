@@ -19,7 +19,6 @@ public class Plunger : TagCollisionTriiger
     {
         powerSlider.minValue = 0f;
         powerSlider.maxValue = maxPower;
-        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
     public void Update()
