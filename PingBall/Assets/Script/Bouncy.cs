@@ -8,27 +8,27 @@ namespace BouncyNameSpace
 { 
     public class Bouncy : TagCollisionTriiger
     {
-        Rigidbody rb;
-        bool canRebound;
-        public float ballSpeed;
-        Vector3 currentVelocity;
-        void Start()
-        {
-            rb = GameObject.FindGameObjectWithTag(CollisionTag).GetComponent<Rigidbody>();
-        }
+        //Rigidbody rb;
+        //bool canRebound;
+        //public float ballSpeed;
+        //Vector3 currentVelocity;
+        //void Start()
+        //{
+        //    rb = GameObject.FindGameObjectWithTag(CollisionTag).GetComponent<Rigidbody>();
+        //}
 
-        void FixedUpdate()
-        {
-            currentVelocity = rb.velocity;
-            ballSpeed = currentVelocity.magnitude;
-        }
+        //void FixedUpdate()
+        //{
+        //    currentVelocity = rb.velocity;
+        //    ballSpeed = currentVelocity.magnitude;
+        //}
 
-        protected override void onCollisionPlayer(Collision other)
-        {
-            ballSpeed = Mathf.Clamp(ballSpeed, 10, 30);
-            Vector3 limitedVelocity = currentVelocity.normalized * ballSpeed;
-            rb.velocity = limitedVelocity;
-        }
+        //protected override void onCollisionPlayer(Collision other)
+        //{
+        //    ballSpeed = Mathf.Clamp(ballSpeed, 10, 30);
+        //    Vector3 limitedVelocity = currentVelocity.normalized * ballSpeed;
+        //    rb.velocity = limitedVelocity;
+        //}
     }
     public class TagCollisionTriiger : MonoBehaviour
     {

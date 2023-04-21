@@ -42,7 +42,7 @@ public class Plunger : TagCollisionTriiger
                 {
                     power -= 1500 * Time.deltaTime;
                 }
-                rb.AddForce(Vector3.up * power);
+                Player.rb.AddForce(Vector3.up * power);
                 StartCoroutine(DecreasePower());
             }
             if (power < 0)

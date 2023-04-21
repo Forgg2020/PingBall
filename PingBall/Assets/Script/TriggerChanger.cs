@@ -5,17 +5,25 @@ using UnityEngine;
 public class TriggerChanger : MonoBehaviour
 {
     public Collider myTrigger;
-    public Collider[] ColliderEorD;    
+    public Collider[] ColliderEorD;
+    public bool TopandDown;
+    public Collider[] ColliderTopandDown;
+
+    
 
     private void Update()
     {
-        if (Manager.Ball.GetComponent<SphereCollider>().bounds.Intersects(ColliderEorD[0].bounds)) //Disable
+        if (myTrigger != null)
         {
-            myTrigger.isTrigger = true;
-        }
-        if (Manager.Ball.GetComponent<SphereCollider>().bounds.Intersects(ColliderEorD[1].bounds)) //Enable
-        { 
-            myTrigger.isTrigger = false;
+            if (Player.PlayerCol.bounds.Intersects(ColliderEorD[0].bounds)) //Disable
+            {
+                myTrigger.isTrigger = true;
+            }
+            if (Player.PlayerCol.bounds.Intersects(ColliderEorD[1].bounds)) //Enable
+            {
+                myTrigger.isTrigger = false;
+            }
         }
     }
 }
+
