@@ -1713,7 +1713,6 @@ MonoBehaviour:
   - {fileID: 1558526241}
   - {fileID: 68540493}
   - {fileID: 1663101317}
-  Score: 0
 --- !u!1 &836519835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2093,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4779066989865405658, guid: f539b6665eb808f46ade609f9a3f7330, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234560130202501878, guid: f539b6665eb808f46ade609f9a3f7330, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

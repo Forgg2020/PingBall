@@ -9,7 +9,7 @@ public class TriggerChanger : MonoBehaviour
 
     private void Update()
     {
-        if (myTrigger != null)
+        if(Player.PlayerCol != null)
         {
             if (Player.PlayerCol.bounds.Intersects(ColliderEorD[0].bounds)) //Disable
             {
@@ -20,6 +20,11 @@ public class TriggerChanger : MonoBehaviour
                 myTrigger.isTrigger = false;
             }
         }
+        else if (Player.PlayerCol == null) 
+        {
+            Player.PlayerCol = GameObject.FindGameObjectWithTag("Player").GetComponent<SphereCollider>();
+        }
+
     }
 }
 

@@ -8,10 +8,9 @@ public class Plunger : TagCollisionTriiger
     public float power;
     float minPower;
     public float maxPower = 2000;
-    public Slider powerSlider;
     public bool ballReady; 
-    public bool isTriggered = false;  // 是否有物體觸發
-
+    public bool isTriggered = false;
+    public Slider powerSlider;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -37,11 +36,18 @@ public class Plunger : TagCollisionTriiger
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>().enabled = true;
                 if (power > 0)
                 {
                     power -= 1500 * Time.deltaTime;
                 }
-                Player.rb.AddForce(Vector3.up * power);
+                if(Player.rb != null)
+                {
+                    Player.rb.AddForce(Vector3.up * power);
+                }else if (Player.rb == null) 
+                {
+                    Player.rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+                }
                 StartCoroutine(DecreasePower());
             }
             if (power < 0)

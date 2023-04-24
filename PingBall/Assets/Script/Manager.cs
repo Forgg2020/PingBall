@@ -12,23 +12,33 @@ public class Manager : TagCollisionTriiger
     public Collider[] ScoreCol;
 
     [Header("分數")]
-    public int Score;
+    public static int Score;
 
- 
+    public void Start()
+    {
+        
+    }
 
     public delegate void OnLevelEvent();
     public event OnLevelEvent OnSouceEvent;
     private void Update()
     {
-        if (SpaceCol.bounds.Intersects(Player.PlayerCol.bounds))
+        if (Player.PlayerCol != null)
         {
-        }
-        for (int i = 0; i < ScoreCol.Length; i++)
-        {
-            if (ScoreCol[i].bounds.Intersects(Player.PlayerCol.bounds))
+            if (SpaceCol.bounds.Intersects(Player.PlayerCol.bounds))
             {
-                OnSouceEvent?.Invoke();
             }
+            for (int i = 0; i < ScoreCol.Length; i++)
+            {
+                if (ScoreCol[i].bounds.Intersects(Player.PlayerCol.bounds))
+                {
+                    OnSouceEvent?.Invoke();
+                }
+            }
+        }
+        else if((Player.PlayerCol == null)) 
+        {
+            Player.PlayerCol = GameObject.FindGameObjectWithTag("Player").GetComponent<SphereCollider>();
         }
     }
 }

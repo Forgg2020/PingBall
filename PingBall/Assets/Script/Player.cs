@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using BouncyNameSpace;
 
-
 public class Player : TagCollisionTriiger
 {
     [Header("ï™ù…")]
@@ -20,14 +19,12 @@ public class Player : TagCollisionTriiger
     public static SphereCollider PlayerCol;
 
     public SphereCollider Ballcol { get; private set; }
-
     public delegate void OnPlayerEvent();
     public event OnPlayerEvent OnDeathEvent;
-    public event OnPlayerEvent OnSpawnEvent;
+    public event OnPlayerEvent OnScoreEvent;
 
-    private void Start()
+    private void OnEnable()
     {
-        CanCreate = true;
         rb = GetComponent<Rigidbody>();
         PlayerCol = GetComponent<SphereCollider>();
         //Manager.GetComponent<Manager>().OnSouceEvent += OnScorePlus;
@@ -35,6 +32,8 @@ public class Player : TagCollisionTriiger
 
     public void FixedUpdate()
     {
+        rb = GetComponent<Rigidbody>();
+        PlayerCol = GetComponent<SphereCollider>();
         Vector3 currentVelocity = rb.velocity;
         float ballSpeed = currentVelocity.magnitude;
         ballSpeed = Mathf.Clamp(ballSpeed, 10, 25);
@@ -42,15 +41,15 @@ public class Player : TagCollisionTriiger
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Space")) 
+        if(other.gameObject.CompareTag("Space"))
         {
             OnDeathEvent?.Invoke();
             print("yes");
         }
-    }
-
-    public void OnScorePlus()
-    {
-
+        if (other.gameObject.CompareTag("Score"))
+        {
+            OnScoreEvent?.Invoke();
+            print("yes");
+        }
     }
 }

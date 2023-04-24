@@ -339,11 +339,15 @@
 "Assets/Script/GravityGenerater.cs"
 "Assets/Script/Manager.cs"
 "Assets/Script/Player.cs"
+"Assets/Script/PlayerState.cs"
 "Assets/Script/Plunger.cs"
 "Assets/Script/Rotator.cs"
 "Assets/Script/SpeedBoard.cs"
-"Assets/Script/TestScript/ManagerScript.cs"
-"Assets/Script/TestScript/PlayerTest.cs"
+"Assets/Script/Test.cs"
+"Assets/Script/Test/ManagerTest.cs"
+"Assets/Script/Test/MT.cs"
+"Assets/Script/Test/PlayerTest.cs"
+"Assets/Script/Test/PT.cs"
 "Assets/Script/TriggerChanger.cs"
 -langversion:9.0
 
