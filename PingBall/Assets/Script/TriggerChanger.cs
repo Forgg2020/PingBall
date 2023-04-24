@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerChanger : MonoBehaviour
 {
+    [Header("碰撞變化")]
     public Collider myTrigger;
     public Collider[] ColliderEorD;
 

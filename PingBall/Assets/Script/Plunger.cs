@@ -5,13 +5,13 @@ using UnityEngine.UI;
 using BouncyNameSpace;
 public class Plunger : TagCollisionTriiger
 {
-    public float power;
-    float minPower;
+    Rigidbody rb;
+    public Slider powerSlider;
+    public float power;    
     public float maxPower = 2000;
     public bool ballReady; 
     public bool isTriggered = false;
-    public Slider powerSlider;
-    Rigidbody rb;
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -36,7 +36,7 @@ public class Plunger : TagCollisionTriiger
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>().enabled = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>().enabled = true;
                 if (power > 0)
                 {
                     power -= 1500 * Time.deltaTime;

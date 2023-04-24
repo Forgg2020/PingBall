@@ -2,22 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerState : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
     public GameObject BallPrefab;
     public SphereCollider Ballcol;
     public Rigidbody rb;
-    public Slider powerSlider;
+    public Text ScoreInt;
 
     private void Start()
     {
-        Debug.Log("deathstart");
         gameObject.GetComponent<Player>().OnDeathEvent += OnPlyaerDeath;
-        gameObject.GetComponent<Player>().OnDeathEvent += OnPlusScore;
-    }
-    private void Update()
-    {
-
+        gameObject.GetComponent<Player>().OnScoreEvent += OnPlusScore;
     }
 
     public void OnPlyaerDeath()
@@ -30,9 +25,7 @@ public class PlayerState : MonoBehaviour
 
     public void OnPlusScore()
     {
-        Debug.Log("Plus");
         Manager.Score = Manager.Score + 10;
-
         print(Manager.Score);
     }
 }

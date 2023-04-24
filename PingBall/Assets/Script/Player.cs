@@ -11,14 +11,16 @@ public class Player : TagCollisionTriiger
 
     [Header("‘¬“x")]
     public static Rigidbody rb;
-    public float maxSpeed = 5f;
     public float minSpeed = 0f;
+    public float maxSpeed = 5f;
 
-    public static GameObject Manager;
+
     public static bool CanCreate;
-    public static SphereCollider PlayerCol;
-
+    public static GameObject Manager;
+    public static SphereCollider PlayerCol; 
     public SphereCollider Ballcol { get; private set; }
+
+
     public delegate void OnPlayerEvent();
     public event OnPlayerEvent OnDeathEvent;
     public event OnPlayerEvent OnScoreEvent;
@@ -27,7 +29,6 @@ public class Player : TagCollisionTriiger
     {
         rb = GetComponent<Rigidbody>();
         PlayerCol = GetComponent<SphereCollider>();
-        //Manager.GetComponent<Manager>().OnSouceEvent += OnScorePlus;
     }
 
     public void FixedUpdate()
@@ -49,7 +50,7 @@ public class Player : TagCollisionTriiger
         if (other.gameObject.CompareTag("Score"))
         {
             OnScoreEvent?.Invoke();
-            print("yes");
+            print("No");
         }
     }
 }
