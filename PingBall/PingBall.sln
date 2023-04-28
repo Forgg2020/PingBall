@@ -1,32 +1,3 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Script", "Script.csproj", "{6CB08D35-343D-6A5C-3BD3-4213C0F58560}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayMode", "PlayMode.csproj", "{1214F560-C8E8-77A5-05E6-462511DF8172}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorMOde", "EditorMOde.csproj", "{4A6510F1-64B1-AD85-ED61-BC099C54ABC1}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CB08D35-343D-6A5C-3BD3-4213C0F58560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CB08D35-343D-6A5C-3BD3-4213C0F58560}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CB08D35-343D-6A5C-3BD3-4213C0F58560}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CB08D35-343D-6A5C-3BD3-4213C0F58560}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1214F560-C8E8-77A5-05E6-462511DF8172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1214F560-C8E8-77A5-05E6-462511DF8172}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1214F560-C8E8-77A5-05E6-462511DF8172}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1214F560-C8E8-77A5-05E6-462511DF8172}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A6510F1-64B1-AD85-ED61-BC099C54ABC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A6510F1-64B1-AD85-ED61-BC099C54ABC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A6510F1-64B1-AD85-ED61-BC099C54ABC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A6510F1-64B1-AD85-ED61-BC099C54ABC1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9c746544ac864393231fc6b7baa39b1b620098f55e52e89efce5452b24cd06f
+size 1841
