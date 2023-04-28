@@ -1,19 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-
-public class PlungerTest : MonoBehaviour
-{
-    [Test]
-
-    public void PowerInitialValueTest()
-    {
-        var GameObject = new GameObject();
-        var PlungerScript = GameObject.AddComponent<Plunger>();
-
-        Assert.That(PlungerScript.power, Is.EqualTo(0f));
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa4378f5c49cc8a0fd4f01928af4e4a841d44d5bad4ef4483f2d4ef792016da9
+size 408

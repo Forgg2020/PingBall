@@ -1,25 +1,3 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Collections;
-using BouncyNameSpace;
-using UnityEngine.Events;
-using UnityEngine.UI;
-
-public class Manager : TagCollisionTriiger
-{
-    [Header("分數")]
-    public static int Score;
-    public Text ScoreInt;
-
-    public delegate void OnLevelEvent();
-    public event OnLevelEvent OnSouceEvent;
-
-
-    private void Update()
-    {
-        ScoreInt.text = Score.ToString();        
-    }
-}
-
-    
+version https://git-lfs.github.com/spec/v1
+oid sha256:735e1bea2f98ed464c74e616a78ad8b3d0210c8543ad9487af330cd21e6ca3c3
+size 492

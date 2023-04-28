@@ -1,20 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-using BouncyNameSpace;
-
-public class GravityTest : MonoBehaviour
-{
-    [Test]
-
-    [TestCase]
-
-    public void GravityT()
-    {
-        var Gravity = new GravityGenerater();
-
-        Assert.AreEqual(Gravity.gravity, Vector3.down * 9.8f);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f69fa831d7a26cc4f6ce39a95716c7c9ab5836374fa83192cf01c9ec8217104
+size 376
