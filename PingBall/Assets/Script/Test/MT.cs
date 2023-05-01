@@ -1,26 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class MT : MonoBehaviour
-{
-    GameObject Player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Player = GameObject.Find("Player");
-        Player.GetComponent<PT>().PlayerDeath += Playerdead;
-    }
-
-    public void Update()
-    {
-        if(Input.GetKey(KeyCode.G))
-        {
-            print("ddd");
-        }
-    }
-    private void Playerdead()
-    {
-        print("dead");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b0b602a6fa617ae358de00d8d435faf5217069a9146e62b1205d84bbfc5f7a5
+size 539
